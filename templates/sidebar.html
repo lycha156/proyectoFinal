@@ -1,13 +1,40 @@
 {% load static %}
 
 {% block sidebar %}
-<div class="border-end bg-white" id="sidebar-wrapper">
-  <!-- <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div> -->
-  <div class="list-group list-group-flush">
-      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><img src="{% static 'images/icons/home.png' %}" width="16" height="16"> Home</a>
-      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><img src="{% static 'images/icons/website.png' %}" width="16" height="16"> Pages</a>
-      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><img src="{% static 'images/icons/user.png' %}" width="16" height="16"> About</a>
-      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!"><img src="{% static 'images/icons/email.png' %}" width="16" height="16"> Contacto</a>
+<div class="row" style="border-bottom: 1px solid #dfdfdf;">
+  <div class="col-3">
+      <img src="{% static 'images/logo.png' %}" width="150" height="81" >
+  </div>
+  <div class="col-6">
+      <form action="" method="POST">
+          <div class="input-group mt-3">
+              <input type="text" class="form-control" placeholder="Buscar..." aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="{% static 'images/icons/search.png' %}" width="24" height="24" ></button>
+          </div>
+      </form>
+  </div>
+  <div class="col-3">
+      <div class="row mt-3">
+          <div class="col text-center">
+              <a class="homelink" href="#" class="float-end">REGISTRARSE</a>
+          </div>
+          <div class="col text-center">
+              <a class="homelink" href="#">Log In</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="row mt-3" style="border-bottom: 1px solid #dfdfdf;">
+  
+  <div class="col text-center mb-3">
+      <a class="homelink" href="#">HOME</a>
+  </div>
+  <div class="col text-center mb-3">
+      <a class="homelink" href="#">ABOUT</a>
+  </div>
+  <div class="col text-center mb-3">
+      <a class="homelink" href="#">CONTACTO</a>
   </div>
 </div>
 {% endblock sidebar %}

@@ -1,0 +1,33 @@
+/* LINKS HOMEPAGE */
+@font-face {
+    font-family: "poppins";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "poppins-bold";
+    src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "poppins-black";
+    src: url("../fonts/Poppins/Poppins-Black.ttf");
+}
+
+a.homelink{
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: 0em;
+    font-family: poppins;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    letter-spacing: .21em;
+    text-transform: uppercase;
+    color: #2E282C;
+    text-decoration: none;
+}
+
+a:hover.homelink{
+    color: #b4643c;
+    text-decoration: none;
+}
