@@ -28,7 +28,7 @@
                 <img class="like" src="{% static '\images\icons\favorito.png' %}"> {{post.likes}} Likes
             </div>
             <div class="col-8">
-                <p class="publicado float-end"> Publicado {{post.fechaPublicacion}} - <a href="#"> Ver [+]</a></p>
+                <p class="publicado float-end"> Publicado {{post.fechaPublicacion}} - <a href="{% url 'blog_page' post.id %}"> Ver [+]</a></p>
             </div>
         </div>
     

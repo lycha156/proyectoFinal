@@ -3,28 +3,68 @@
 
 {% block content %}
 
+<!--PUBLICACION-->
 <div class="col-10 offset-1">
 
     <div class="row">
         <div class="col">
-            <img src="{{post.foto.url}}" class="imagen_centro" >
+            <img class="page-foto" src="{{post.fotoPortada.url}}" class="imagen_centro" >
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            {{post.articulo}}
+            <h3 class="page-titulo" >{{post.titulo}}</h3>
+            <p class="page-articulo">{{post.articulo}}</p>
         </div>
     </div>
 
     <div class="row">
         <div class="col">
-            Publicado {{post.fechaPublicacion}}
+            <p class="page-publicado">Publicado {{post.fechaPublicacion}}</p>
         </div>
         <div class="col">
-            Likes {{post.likes}}
+            <p class="float-end page-publicado">{{post.likes}} Likes</p>
         </div>
     </div>
+
 </div>
 
+<!--COMENTARIOS-->
+<div class="col-10 offset-1">
+    <div class="row">
+        <h3 class="comentario-titulo">COMENTARIOS</h3>
+    </div>
+
+    <div class="row mt-3 mb-3" style="border-bottom: 1px solid #d2d2d2; padding-bottom: 15px;">
+
+        <div class="input-group">
+            <textarea name="comentario" id="comentario" cols="30" rows="5" class="form-control"></textarea>
+        </div>
+
+        <div class="input-group mt-3">
+            <button class="float-end btn btn-marron btn-success" type="submit">Enviar</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <div class="row">
+                <img class="comentario-foto-perfil" src="{% static 'images\usuario.jpg' %}">
+            </div>
+            <div class="row">
+                <p class="comentario-likes">15 Likes</p>
+            </div>
+        </div>
+        <div class="col-10">
+            <div class="row">
+                <p class="comentario-publicado">Roberto - 15-08-2022</p> 
+            </div>
+            <div class="row">
+                <p class="comentario" >Easily extend form controls by adding text, buttons, or button groups on either side of textual inputs, custom selects, and custom file inputs.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
 {% endblock content %}

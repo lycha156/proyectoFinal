@@ -11,3 +11,7 @@ class Post(models.Model):
 
     def __str__(self):
         return f"{self.titulo} (Publicado {self.fechaPublicacion})"
+
+
+# class Contacto(models.Model):
+#     pass
