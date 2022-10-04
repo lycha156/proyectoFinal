@@ -99,3 +99,77 @@ img:hover.likes{
     transform: scale(1.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;   /* Height of the footer */
+    /* background: #6cf; */
+    border-top: #dfdfdf 1px solid;
+ }
+
+ /* ABOUT */
+ /* IMAGEN */
+ .imagen_centro {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
+
+.about-titulo{
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: 0em;
+    font-family: poppins;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    letter-spacing: .21em;
+    text-transform: uppercase;
+    color: #b4643c;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.about-info{
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: 0em;
+    font-family: poppins;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #2E282C;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* CONTACTO */
+.contacto-titulo{
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: 0em;
+    font-family: poppins;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 25px;
+    letter-spacing: .21em;
+    text-transform: uppercase;
+    color: #b4643c;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.btn-marron{
+    background-color: #b4643c;
+    border-color: #88421e;
+}
+
+button:hover .btn-marron{
+    background-color: #5d290e;
+    border-color: #88421e;
+}
