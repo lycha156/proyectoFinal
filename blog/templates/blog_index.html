@@ -5,89 +5,36 @@
 
 <div class="col-10 offset-1">
 
+    {% for post in posts %}
     <!-- ARTICULO -->
     <div class="row mt-4" style="border-bottom: 1px solid #d2d2d2;">
 
         <div class="row">
             <div class="col-lg-4 col-sm-12 mr-3">
-                <img class="foto" src="https://picsum.photos/300/200">
+                <img class="foto" src="{{post.fotoPortada.url}}">
             </div>
             <div class="col-lg-8 col-sm-12">
                 <div class="row">
-                    <h2 class="titulo">TITULO DEL ARTICULO</h2>
+                    <h2 class="titulo">{{post.titulo}}</h2>
                 </div>
                 <div class="row">
-                    <p class="contenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="contenido">{{post.articulo|truncatewords:50}}</p>
                 </div>
             </div>
         </div>
 
         <div class="row mt-2">
             <div class="col-4 float-start">
-                <img class="like" src="{% static 'images/icons/favorito.png' %}"> 15 Likes
+                <img class="like" src="{% static '\images\icons\favorito.png' %}"> {{post.likes}} Likes
             </div>
             <div class="col-8">
-                <p class="publicado float-end"> Publicado 15-08-2022@13:56Hs - <a href="#"> Ver [+]</a></p>
+                <p class="publicado float-end"> Publicado {{post.fechaPublicacion}} - <a href="#"> Ver [+]</a></p>
             </div>
         </div>
     
     </div>
-
-    <!-- ARTICULO -->
-    <div class="row mt-4" style="border-bottom: 1px solid #d2d2d2;">
-
-        <div class="row">
-            <div class="col-4 mr-3">
-                <img class="foto" src="https://picsum.photos/300/200">
-            </div>
-            <div class="col-8">
-                <div class="row">
-                    <h2 class="titulo">TITULO DEL ARTICULO</h2>
-                </div>
-                <div class="row">
-                    <p class="contenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-2">
-            <div class="col-4 float-start">
-                <img class="like" src="{% static 'images/icons/favorito.png' %}" width="24" height="24"> 15 Likes
-            </div>
-            <div class="col-8">
-                <p class="publicado float-end"> Publicado 15-08-2022@13:56Hs - <a href="#">Ver [+]</a></p>
-            </div>
-        </div>
+    {% endfor %}
     
-    </div>
-
-    <!-- ARTICULO -->
-    <div class="row mt-4" style="border-bottom: 1px solid #d2d2d2;">
-
-        <div class="row">
-            <div class="col-4 mr-3">
-                <img class="foto" src="https://picsum.photos/300/200">
-            </div>
-            <div class="col-8">
-                <div class="row">
-                    <h2 class="titulo">TITULO DEL ARTICULO</h2>
-                </div>
-                <div class="row">
-                    <p class="contenido">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-2">
-            <div class="col-4 float-start">
-                <img class="like" src="{% static 'images/icons/favorito.png' %}" width="24" height="24"> 15 Likes
-            </div>
-            <div class="col-8">
-                <p class="publicado float-end"> Publicado 15-08-2022@13:56Hs - <a href="#">Ver [+]</a></p>
-            </div>
-        </div>
-    
-    </div>
 </div>
 
 

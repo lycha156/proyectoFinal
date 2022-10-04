@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="col-10 offset-1">
+
+    <div class="row">
+        <div class="col">
+            <img src="{{post.foto.url}}" class="imagen_centro" >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {{post.articulo}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            Publicado {{post.fechaPublicacion}}
+        </div>
+        <div class="col">
+            Likes {{post.likes}}
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
