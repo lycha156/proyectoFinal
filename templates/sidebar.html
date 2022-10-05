@@ -6,9 +6,10 @@
       <img src="{% static 'images/logo.png' %}" width="150" height="81" >
   </div>
   <div class="col-6">
-      <form action="" method="POST">
+      <form action="{% url 'blog_index' %}" method="POST">
+            {% csrf_token %}
           <div class="input-group mt-3">
-              <input type="text" class="form-control" placeholder="Buscar..." aria-describedby="button-addon2">
+              <input type="text" name="q" class="form-control" placeholder="Buscar...">
               {% comment %} <button class="btn btn-outline-secondary" type="button" id="button-addon2"><img src="{% static 'images/icons/search.png' %}" width="24" height="24" ></button> {% endcomment %}
           </div>
       </form>

@@ -31,10 +31,37 @@
                 <p class="publicado float-end"> Publicado {{post.fechaPublicacion}} - <a href="{% url 'blog_page' post.id %}"> Ver [+]</a></p>
             </div>
         </div>
-    
+        
     </div>
-    {% endfor %}
     
+    {% empty%}
+
+    <div class="alert alert-danger mt-3 text-center" role="alert">
+        No se encontraron articulos que correspondan con lo solicitado
+    </div>
+
+    {% endfor %}
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if posts.has_previous %}
+                <a href="?page=1">&laquo; Primero</a>
+                <a href="?page={{ posts.previous_page_number }}">Anterior</a>
+            {% endif %}
+            
+            {% if posts.number %}
+            <span class="current">
+                Pagina {{ posts.number }} de {{ posts.paginator.num_pages }}.
+            </span>
+            {% endif %}
+            
+            {% if posts.has_next %}
+                <a href="?page={{ posts.next_page_number }}">Proximo</a>
+                <a href="?page={{ posts.paginator.num_pages }}">Ultimo &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
 </div>
 
 
