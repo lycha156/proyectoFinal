@@ -1,5 +1,7 @@
+from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.core.validators import validate_image_file_extension
+from django.forms import DateField
 
 class Post(models.Model):
 
@@ -13,5 +15,12 @@ class Post(models.Model):
         return f"{self.titulo} (Publicado {self.fechaPublicacion})"
 
 
-# class Contacto(models.Model):
-#     pass
+class Contacto(models.Model):
+
+    nombre = models.CharField("Nombre y Apellido", max_length=100)
+    email = models.EmailField("Email", max_length=254)
+    mensaje = models.TextField("Mensaje")
+    fecha = models.DateField("Fecha de Contacto", auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.nombre}, ({self.fecha}) - [{self.mensaje}]"

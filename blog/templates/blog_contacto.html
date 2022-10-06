@@ -3,27 +3,39 @@
 
 {% block content %}
 <div class="col-8 offset-2">
-    <form class="mt-4" action="" method="POST">
 
+    {% if messages %}
+        {% for message in messages %}
+            <div class="col">
+                <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %} background-{{ message.tags }} mt-3" role="alert">{{ message }}</div>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <form class="mt-4" action="" method="POST">
+        {% csrf_token %}
         <h2 class="contacto-titulo">Contacta con nosotros y resuelve tus dudas</h2>
 
         <div class="row g-2 mt-3">
             <div class="col-md">
               <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInputGrid" placeholder="Apellido y Nombre" value="">
+                {% comment %} <input type="email" class="form-control" id="floatingInputGrid" placeholder="Apellido y Nombre" value=""> {% endcomment %}
+                {{form.nombre}}
                 <label for="floatingInputGrid">Apellido Y Nombre</label>
               </div>
             </div>
             <div class="col-md">
                 <div class="form-floating">
-                    <input type="email" class="form-control" id="floatingInputGrid" placeholder="Email" value="">
+                    {% comment %} <input type="email" class="form-control" id="floatingInputGrid" placeholder="Email" value=""> {% endcomment %}
+                    {{form.email}}
                     <label for="floatingInputGrid">Email</label>
                 </div>
             </div>
           </div>
 
         <div class="form-floating mt-3">
-            <textarea style="height: 200px;" class="form-control" placeholder="Deje un comentario" id="floatingTextarea"></textarea>
+            {% comment %} <textarea style="height: 200px;" class="form-control" placeholder="Deje un comentario" id="floatingTextarea"></textarea> {% endcomment %}
+            {{form.mensaje}}
             <label for="floatingTextarea">Comentarios</label>
         </div>
 
