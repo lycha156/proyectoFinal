@@ -94,6 +94,36 @@ a:hover.homelink{
     height: 24px;
 }
 
+/* INDEX - PAGINACION */
+.pagination{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.step-links{
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: 0em;
+    font-family: poppins;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #2E282C;
+    text-decoration: none;
+}
+
+.step-links a{
+    font-family: Arial,Helvetica,sans-serif;
+    letter-spacing: 0em;
+    font-family: poppins;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    color: #2E282C;
+    text-decoration: none;
+}
+
 /* EFECTO IMAGEN LIKE */
 img:hover.likes{
     transform: scale(1.5);
@@ -306,3 +336,4 @@ button:hover .btn-marron{
     text-decoration: none;
     display: block;
 }
+

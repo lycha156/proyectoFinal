@@ -45,8 +45,8 @@
     <div class="pagination">
         <span class="step-links">
             {% if posts.has_previous %}
-                <a href="?page=1">&laquo; Primero</a>
-                <a href="?page={{ posts.previous_page_number }}">Anterior</a>
+                <a href="?page=1"><img src="{% static 'images/icons/primero.png' %}" width="24" height="24"></a>
+                <a href="?page={{ posts.previous_page_number }}"><img src="{% static 'images/icons/anterior.png' %}" width="24" height="24"></a>
             {% endif %}
             
             {% if posts.number %}
@@ -56,8 +56,8 @@
             {% endif %}
             
             {% if posts.has_next %}
-                <a href="?page={{ posts.next_page_number }}">Proximo</a>
-                <a href="?page={{ posts.paginator.num_pages }}">Ultimo &raquo;</a>
+                <a href="?page={{ posts.next_page_number }}"><img src="{% static 'images/icons/siguiente.png' %}" width="24" height="24"></a>
+                <a href="?page={{ posts.paginator.num_pages }}"><img src="{% static 'images/icons/ultimo.png' %}" width="24" height="24"></a>
             {% endif %}
         </span>
     </div>
